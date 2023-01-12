@@ -1,0 +1,14 @@
+.kernel {
+    width: 76px;
+    height: 307px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 95px 193px;
+    gap: 6px;
+}
+.kernel__top, .kernel__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}

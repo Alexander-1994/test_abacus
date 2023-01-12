@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
+import Ramp from './components/Ramp';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	useEffect(() => {
+		const message = setTimeout(() => {
+			alert('Приветствую! Данное тестовое выполнил на стеке js/react/redux. TypeScript только начал изучать, по-этому не использую его до полного освоения. Жду от вас обратную связь. Телеграм: @kisliy_doma. Спасибо')
+		}, 5000);
+
+		return () => clearTimeout(message);
+	}, [])
+
+  	return (
+		<div className="App">
+			<Ramp />
+		</div>
+  	);
 }
 
 export default App;
